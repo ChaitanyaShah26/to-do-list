@@ -1,0 +1,155 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(bg-image.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    padding: 10px 40px;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 4px black;
+}
+
+header h1 {
+    text-align: right;
+    font-family: "Georgia";
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list {
+    background: transparent;
+    backdrop-filter: blur(100px);
+    box-shadow: 4px 8px 10px black;
+    width: 50vw;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#list h2 {
+    align-self: stretch;
+    padding: 8px;
+    margin: 4px;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+#new-task {
+    padding: 4px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+#add-task {
+    flex-grow: 1;
+    padding: 6px 12px;
+    height: 20px;
+    font-size: 120%;
+    border-radius: 4px;
+    border: 1px solid #36454F;
+    background: #E5E4E2;
+}
+
+#add-task::placeholder {
+    font-family: "Cambria";
+    color: #52595D;
+}
+
+#new-task button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #08A04B;
+    color: white;
+    cursor: pointer;
+}
+#new-task button:hover {
+    transform: translateY(-2px);
+}
+
+#task-list {
+    align-self: stretch;
+    margin: 20px 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 0 4px 2px #3A3B3C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-element {
+    align-self: stretch;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #B6B6B4;
+}
+
+.task-text {
+    flex-grow: 1;
+    padding: 4px;
+    margin: 0;
+}
+
+.task-element button {
+    padding: 4px;
+    margin: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 120%;
+    background: rgba(250, 250, 250, 0.4);
+    border: none;
+    transition: 0.4s;
+}
+
+.task-element button:hover {
+    transform: translateY(-2px);
+}
+
+.complete-button {
+    color: #056608;
+}
+
+.delete-button {
+    color: #E41B17;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+@media(max-width: 900px) {
+    #list {
+        width: 80vw;
+    }
+}
